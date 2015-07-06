@@ -1,5 +1,6 @@
 var React = require("react");
 var Comment = require("./comment");
+var LikeButton = require("./likeButton");
 
 var CommentList = React.createClass({
 	render: function () {
@@ -7,6 +8,8 @@ var CommentList = React.createClass({
 					return (
 						<Comment author={ comment.author }>
 							{ comment.text  }
+							<LikeButton liked= { comment.liked } 
+										commentId = { comment._id }/>
 						</Comment>
 						)
 				});

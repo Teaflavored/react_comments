@@ -7,7 +7,8 @@ var commentSchema = new Schema({
 	author: String,
 	text: String,
 	updated_at: Date,
-	created_at: Date
+	created_at: Date,
+	liked: { type: Boolean, default: false }
 });
 
 

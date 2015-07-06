@@ -21,7 +21,6 @@ var CommentBox = React.createClass({
 						   });
 					   },
 	handleCommentSubmit: function (comment) {
-							 console.log(comment);
 							 $.ajax({
 								 "url": this.props.url,
 							 	 "type": "POST",
