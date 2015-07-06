@@ -1,0 +1,27 @@
+{
+	"name" : "test",
+	"version" : "0.0.0",
+	"scripts" : { "browserify" : "browserify app.js | uglifyjs -mc > public/bundle.js",
+					"build" : "npm run browserify",
+					"watch" : "watchify app.js -do public/bundle.js -v",
+					"start" : "npm run build && node server.js"},
+	"dependencies" : {
+		"react" : "*",
+		"node-jsx" : "*",
+		"express" : "*",
+		"jade" : "*",
+		"express-handlebars" : "*",
+		"jquery" : "*",
+		"body-parser" : "*",
+		"mongoose" : "*"
+	},
+	"devDependencies" : {
+		"browserify" : "*",
+		"reactify" : "*",
+		"uglifyjs" : "*",
+		"watchify" : "*"
+	},
+	"browserify" : {
+		"transform" : ["reactify"]
+	}
+}
